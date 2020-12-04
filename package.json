@@ -1,0 +1,14 @@
+{
+    "name": "typecho_joe_theme",
+    "version": "4.4.5",
+    "description": "Eternity is not a distance but a decision - Joe",
+    "main": "index.php",
+    "keywords": [
+        "Joe",
+        "Typecho",
+        "Typecho-Joe-Theme",
+        "Typecho_Joe_Theme"
+    ],
+    "author": "Joe",
+    "license": "ISC"
+}
