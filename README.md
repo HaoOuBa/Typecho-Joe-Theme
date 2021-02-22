@@ -1,3 +1,1 @@
-当前主题在GitHub上不再更新，请前往QQ群文件下载最新版本！
-
-QQ群号：198963776
+本版本主题已停止更新维护，请下载新版本：https://github.com/HaoOuBa/Joe
