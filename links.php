@@ -92,12 +92,12 @@ if (isset($_POST['agree'])) {
                 <?php $this->need('public/comment.php'); ?>
             </section>
 
-            <?php if ($this->options->JPostAsideStatus === 'on') : ?>
+            <?php if ($this->options->JPostAsideStatus === 'on' && $this->fields->aside !== 'off') : ?>
                 <?php $this->need('public/aside.php'); ?>
             <?php endif; ?>
         </section>
 
-        
+
 
         <!-- 弹幕 -->
         <?php if ($this->options->JBarragerStatus === 'on') : ?>

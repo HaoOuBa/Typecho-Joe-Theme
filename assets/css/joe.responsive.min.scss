@@ -79,8 +79,6 @@
                 }
             }
         }
-        .main.type1 {
-        }
     }
     .j-post {
         .main {
@@ -96,6 +94,27 @@
                     li {
                         width: 20%;
                     }
+                }
+            }
+        }
+        .wallpaper-api {
+            .wallpaper-list {
+                .list {
+                    .item {
+                        width: 33.333333%;
+                    }
+                }
+            }
+        }
+        .huya-list {
+            .huya-list-item {
+                li {
+                    width: 33.33333333%;
+                }
+            }
+            .huya-list-play{
+                iframe {
+                    height: 460px;
                 }
             }
         }
@@ -217,6 +236,27 @@
                 }
             }
         }
+        .wallpaper-api {
+            .wallpaper-list {
+                .list {
+                    .item {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+        .huya-list {
+            .huya-list-item {
+                li {
+                    width: 50%;
+                }
+            }
+            .huya-list-play{
+                iframe {
+                    height: 360px;
+                }
+            }
+        }
     }
     .j-photos {
         a {
@@ -250,10 +290,35 @@
             }
         }
     }
+    .j-card-nav,
+    .j-photos,
+    .j-timeline,
+    .j-collapse,
+    .j-card-default,
+    .j-tabs,
+    .j-line,
+    .j-alt,
+    .j-short-video {
+        margin: 15px 0;
+    }
+    .j-short-video {
+        .item {
+            width: 100%;
+        }
+    }
+    .j-video-preview {
+        iframe {
+            height: 250px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    }
 }
 
 @media (max-width: 768px) {
-    
     .j-search-down-xs {
         display: block;
     }
@@ -402,6 +467,7 @@
                     border-radius: var(--radius-wap);
                     overflow: hidden;
                     margin-bottom: 15px;
+                    border-bottom: none;
                     .picture-box {
                         display: block;
                         width: 100%;
@@ -616,11 +682,12 @@
                     margin: 15px 0;
                 }
 
+                .hljs-pre {
+                    margin: 15px 0;
+                    font-size: 13px;
+                }
                 .hljs {
                     max-height: 350px;
-                    padding: 10px;
-                    border-radius: calc(var(--radius-wap) / 2);
-                    margin: 15px 0;
                 }
 
                 .reply-content {
@@ -635,6 +702,15 @@
                             width: 100%;
                         }
                     }
+                }
+
+                .iframe-dplayer {
+                    height: 225px;
+                    margin: 15px 0;
+                }
+
+                .iframe-music {
+                    margin: 15px auto;
                 }
             }
             .video-api {
@@ -710,6 +786,55 @@
                         height: 180px;
                     }
                 }
+            }
+        }
+        .huya-list {
+            .huya-list-type {
+                border-radius: var(--radius-wap);
+                .list {
+                    ul {
+                        flex-wrap: nowrap;
+                        overflow-x: auto;
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .huya-list-item {
+                li {
+                    > div{
+                        .screenshot {
+                            height: 120px;
+                        }
+                        .desc {
+                            .user {
+                                .right { 
+                                    svg {
+                                        display: none;
+                                    }
+                                    .totalCount {
+                                        margin-right: 0;
+                                    }
+                                    .gameFullName {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                        .hover {
+                            height: 120px;
+                        }
+                    }
+                }
+            }
+            .huya-list-play {
+                iframe {
+                    height: 190px;
+                }
+            }
+            .huya-list-pagination {
+                justify-content: center;
             }
         }
     }

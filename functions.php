@@ -58,16 +58,6 @@ function themeConfig($form)
     $JCDN->setAttribute('class', 'j-setting-content j-setting-global');
     $form->addInput($JCDN->multiMode());
 
-    $JCache = new Typecho_Widget_Helper_Form_Element_Select(
-        'JCache',
-        array('off' => '关闭（默认）', 'on' => '开启'),
-        'off',
-        '请选择是否启用缓存功能（开发中，暂不可用）',
-        '介绍：开启后，网站访问过一次后，第二次访问会有极大的速度提升！'
-    );
-    $JCache->setAttribute('class', 'j-setting-content j-setting-global');
-    $form->addInput($JCache->multiMode());
-
     $JDefend = new Typecho_Widget_Helper_Form_Element_Select(
         'JDefend',
         array('off' => '关闭（默认）', 'on' => '开启'),
@@ -97,6 +87,23 @@ function themeConfig($form)
     );
     $JHeaderStyle->setAttribute('class', 'j-setting-content j-setting-global');
     $form->addInput($JHeaderStyle->multiMode());
+
+
+    $JCustomNavs = new Typecho_Widget_Helper_Form_Element_Textarea(
+        'JCustomNavs',
+        NULL,
+        NULL,
+        '导航栏自定义链接（非必填）',
+        '介绍：用于自定义导航栏链接 <br />
+         格式：跳转文字 || 跳转链接（中间使用两个竖杠分隔）<br />
+         其他：一行一个，一行代表一个超链接 <br />
+         例如：<br />
+            百度一下 || https://baidu.com <br />
+            腾讯视频 || https://v.qq.com
+         '
+    );
+    $JCustomNavs->setAttribute('class', 'j-setting-content j-setting-global');
+    $form->addInput($JCustomNavs);
 
     $JNavMaxNum = new Typecho_Widget_Helper_Form_Element_Select(
         'JNavMaxNum',
@@ -348,25 +355,6 @@ function themeConfig($form)
     $JLive2D->setAttribute('class', 'j-setting-content j-setting-global');
     $form->addInput($JLive2D->multiMode());
 
-    $JPageLoading = new Typecho_Widget_Helper_Form_Element_Select(
-        'JPageLoading',
-        array(
-            'off' => '关闭（默认）',
-            'spinner1' => '形状1',
-            'spinner2' => '形状2',
-            'spinner3' => '形状3',
-            'spinner4' => '形状4',
-            'spinner5' => '形状5',
-            'spinner6' => '形状6',
-            'spinner7' => '形状7',
-        ),
-        'off',
-        '是否开启页面刷新首次进入加载',
-        '介绍：开启后当您刷新页面或首次进入页面时，将显示全屏加载'
-    );
-    $JPageLoading->setAttribute('class', 'j-setting-content j-setting-global');
-    $form->addInput($JPageLoading->multiMode());
-
     $JBackTopStatus = new Typecho_Widget_Helper_Form_Element_Select(
         'JBackTopStatus',
         array('off' => '关闭（默认）', 'on' => '开启'),
@@ -529,8 +517,7 @@ function themeConfig($form)
             'background3.min.js' => '效果3',
             'background4.min.js' => '效果4',
             'background5.min.js' => '效果5',
-            'background6.min.js' => '效果6',
-            'background7.min.js' => '效果7',
+            'background6.min.js' => '效果6'
         ),
         'off',
         '是否开启动态背景图（仅限PC）',
@@ -1582,18 +1569,6 @@ function themeConfig($form)
     $JAnalysis->setAttribute('class', 'j-setting-content j-setting-other');
     $form->addInput($JAnalysis);
 
-    $JDplayerAPI = new Typecho_Widget_Helper_Form_Element_Textarea(
-        'JDplayerAPI',
-        NULL,
-        NULL,
-        'dplayer的弹幕库API（非必填）',
-        '介绍：如果填写正确的API，则播放器会加载弹幕功能，反之 <br />
-         例如：https://dplayer.alone88.cn/ <br />
-         注意: 如果您填的自定义API，提示加载失败，尝试在API最后面加上 / 符号
-        '
-    );
-    $JDplayerAPI->setAttribute('class', 'j-setting-content j-setting-other');
-    $form->addInput($JDplayerAPI);
 
     $JShieldNames = new Typecho_Widget_Helper_Form_Element_Text(
         'JShieldNames',

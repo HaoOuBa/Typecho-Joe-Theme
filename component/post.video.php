@@ -9,9 +9,9 @@
         </div>
         <div class="player">
             <?php if ($this->options->JAnalysis) : ?>
-                <iframe allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" id="j-dplayer-iframe" data-src="<?php $this->options->JAnalysis() ?>"></iframe>
+                <iframe allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" id="j-dplayer" data-src="<?php $this->options->JAnalysis() ?>"></iframe>
             <?php else : ?>
-                <div id="j-dplayer"></div>
+                <iframe allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" id="j-dplayer" data-src="<?php echo GetDplayer() . '?url=' ?>"></iframe>
             <?php endif; ?>
         </div>
     </div>

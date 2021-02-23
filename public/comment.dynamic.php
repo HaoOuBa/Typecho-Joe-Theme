@@ -85,7 +85,7 @@ function threadedComments($comments, $options)
                 <input type="hidden" value="<?php $this->user->mail(); ?>" name="mail" />
                 <input type="hidden" value="<?php $this->options->siteUrl(); ?>" name="url" />
                 <div class="form-foot">
-                    <div class="OwO"></div>
+                    <div class="OwO" id="OwO_Container"></div>
                     <button type="submit">立即发表</button>
                 </div>
             </form>
